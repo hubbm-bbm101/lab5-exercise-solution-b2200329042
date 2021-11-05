@@ -1,0 +1,41 @@
+#1. Write a program that asks for a number N as a user input, and calculates the sum of odd numbers, and the average of even numbers starting from 1 up to and including N.
+n = int(input("Please enter an integer: "))
+sum1 = 0
+sum2 = 0
+a = 0
+for i in range (0,n+1):
+    if i % 2 != 0:
+        sum1 += i
+    elif i % 2 == 0:
+        a += 1
+        sum2 += i
+        sum2 = sum2/a
+print("Odd number sum ", sum1)
+print("Even number sum: ", sum2)
+
+#3. Guessing game! Pick a number randomly. While user does not guess the number correctly give an instruction about the number and take another guess from user.
+Instruction:
+import random
+guessesTaken = 0
+number = random.randint(1, 20)
+print("I am thinking of a number between 1 and 20.")
+while guessesTaken < 6:
+    print("Your guess?")
+    guess=input()
+    guess=int(guess)
+    
+guessesTaken = guessesTaken + 1
+if guess < number:
+    print('Your guess is too low.')
+if guess > number:
+    print('Your guess is too high.')
+if guess == number:
+    break
+if guess == number:
+    guessesTaken = str(guessesTaken)
+    print('Well Done !,'+ guessesTaken + ' guesses!')
+if guess != number:
+          number = str(number)
+          print('Nope'+ number)
+
+
